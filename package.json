@@ -13,7 +13,8 @@
     "test:coverage": "jest --coverage",
     "lint": "eslint src",
     "format": "npx prettier --write src",
-    "format:check": "npx prettier --check src"
+    "format:check": "npx prettier --check src",
+    "migrateLintConfig": "npx @eslint/migrate-config .eslintrc.json"
   },
   "keywords": [],
   "author": "",
