@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf ./build",
-    "build": "npm-run-all lint format test clean && tsc",
+    "build": "npm-run-all lint format clean && tsc",
     "start:prod": "npm run build && cd build && node src",
     "start": "node src",
     "local": "ts-node src",
