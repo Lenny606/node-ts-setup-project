@@ -1,0 +1,22 @@
+{
+    "name": "ts-app",
+    "version": "1.0.0",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "build": "tsc",
+        "start": "node src"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "@types/node": "^22.10.1",
+        "typescript": "^5.7.2"
+    },
+    "dependencies": {
+        "dotenv": "^16.4.7",
+        "mongoose": "^8.8.4"
+    }
+}
