@@ -1,18 +1,18 @@
 import supertest from "supertest";
-import {server} from "./index";
+import { server } from "./index";
 
 describe("Server", () => {
-    const req = supertest.agent(server)
+  const req = supertest.agent(server);
 
-    afterAll((done) => {
-        server.close(done)
-    })
-    it("should get /", async () => {
-        const res = await req.get('/')
+  afterAll((done) => {
+    server.close(done);
+  });
+  it("should get /", async () => {
+    const res = await req.get("/");
 
-        expect(res.status).toBe(200)
-        expect(res.body).toEqual({
-            data: "Hello, World!"
-        })
-    })
-})
+    expect(res.status).toBe(200);
+    expect(res.body).toEqual({
+      data: "Hello, World!",
+    });
+  });
+});
