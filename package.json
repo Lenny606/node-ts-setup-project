@@ -10,7 +10,10 @@
     "local": "ts-node src",
     "local:watch": "nodemon -e ts,json --exec npm run local",
     "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src",
+    "format": "npx prettier --write src",
+    "format:check": "npx prettier --check src"
   },
   "keywords": [],
   "author": "",
