@@ -1,11 +1,14 @@
 {
-  "name": "ts-app",
+  "name": "node-ts-app",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "build": "tsc",
-    "start:prod": "cd build && node src"
+    "clean": "rimraf ./build",
+    "build": "npm run clean && tsc",
+    "start:prod": "npm run build && cd build && node src",
+    "start": "node src",
+    "local": "ts-node src",
+    "local:watch": "nodemon -e ts,json --exec npm run local"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +20,10 @@
   },
   "dependencies": {
     "dotenv": "^16.4.7",
-    "mongoose": "^8.8.4"
+    "mongoose": "^8.8.4",
+    "nodemon": "^3.1.7",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2"
   }
 }
